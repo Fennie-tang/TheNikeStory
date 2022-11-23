@@ -1,0 +1,242 @@
+[
+	{
+		"_id": 1,
+		"name": "Air Force 1",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirForce1.jpg"
+	},
+	{
+		"_id": 2,
+		"name": "Air Huarche",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirHuarche.jpg"
+	},
+	{
+		"_id": 3,
+		"name": "Air Jordan 1",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirJordan1.jpg"
+	},
+	{
+		"_id": 4,
+		"name": "Air Jordan 3",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirJordan3.jpg"
+	},
+	{
+		"_id": 5,
+		"name": "Air Jordan 6",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirJordan6.jpg"
+	},
+	{
+		"_id": 6,
+		"name": "Air Jordan 11",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirJordan11.jpg"
+	},
+	{
+		"_id": 7,
+		"name": "Air Max 1",
+		"year": "1987",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/AirMax1.jpg"
+	},
+	{
+		"_id": 8,
+		"name": "Nike Air Flight 89",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirFlight89.jpg"
+	},
+	{
+		"_id": 9,
+		"name": "Nike Air Foamposite",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirFoamposite.jpg"
+	},
+	{
+		"_id": 10,
+		"name": "Nike Air Mag",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirMag.jpg"
+	},
+	{
+		"_id": 11,
+		"name": "Nike Air Max 90",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirMax90.jpg"
+	},
+	{
+		"_id": 12,
+		"name": "Nike Air Max 97",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirMax97.jpg"
+	},
+	{
+		"_id": 13,
+		"name": "Nike Air Mowabb",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirMowabb.jpg"
+	},
+	{
+		"_id": 14,
+		"name": "Nike Air Presto",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirPresto.jpg"
+	},
+	{
+		"_id": 15,
+		"name": "Nike Air Safari",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirSafari.jpg"
+	},
+	{
+		"_id": 16,
+		"name": "Nike Air Stab",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirStab.jpg"
+	},
+	{
+		"_id": 17,
+		"name": "Nike Air Yeezy",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirYeezy.jpg"
+	},
+	{
+		"_id": 18,
+		"name": "Nike Air Zoom Generation",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeAirZoomGeneration.jpg"
+	},
+	{
+		"_id": 19,
+		"name": "Nike Blazer",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeBlazer.jpg"
+	},
+	{
+		"_id": 20,
+		"name": "Nike Challenge Court",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeChallengeCourt.jpg"
+	},
+	{
+		"_id": 21,
+		"name": "Nike Cortez",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeCortez.jpg"
+	},
+	{
+		"_id": 22,
+		"name": "Nike Dunk SB",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeDunkSB.jpg"
+	},
+	{
+		"_id": 23,
+		"name": "Nike Fly Knit Racer",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeFlyknitRacer.jpg"
+	},
+	{
+		"_id": 24,
+		"name": "Nike Free 5.0",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeFree5.0.jpg"
+	},
+	{
+		"_id": 25,
+		"name": "Nike Hyper Dunk",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeHyperDunk.jpg"
+	},
+	{
+		"_id": 26,
+		"name": "Nike Kobe 4",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeKobe4.jpg"
+	},
+	{
+		"_id": 27,
+		"name": "Nike Kobe 5",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeKobe5.jpg"
+	},
+	{
+		"_id": 28,
+		"name": "Nike Pegasus",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikePegasus.jpg"
+	},
+	{
+		"_id": 29,
+		"name": "Nike Waffle Racer",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeWaffleRacer.jpg"
+	},
+	{
+		"_id": 30,
+		"name": "Nike Zoom Spiridon",
+		"year": "",
+		"description": "",
+		"category": "",
+		"shoeURL": "/images/shoe-pics/NikeZoomSpiridon.jpg"
+	}
+]
