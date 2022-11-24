@@ -33,7 +33,7 @@ const getAllSneakers = async (req, res) => {
 const getSneaker = async (req, res) => {
 
     try {
-        const _id = Number (req.params._id)
+        const _id = (req.params._id)
         const client = await new MongoClient(MONGO_URI, options)
         await client.connect()
 

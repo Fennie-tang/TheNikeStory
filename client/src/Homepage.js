@@ -1,12 +1,22 @@
 import styled from "styled-components"
 import SneakerCard from "./SneakerCard"
-const Homepage = (items)=> {
+import { useState, useEffect } from "react";
+
+const Homepage = ()=> {
+  const [allShoes, setAllShoes] = useState();
+
+  useEffect(() => {
+    fetch(`/getAllSneakers`)
+      .then((res) => res.json())
+      .then((data) => setAllShoes(data.data))
+      .catch((err) => console.log(err));
+  }, );
   return(
     <>
-    {items ? (
+    {allShoes ? (
           <ShoeGrid>
-            {items.map((item) => {
-              return <SneakerCard key={item._id} item={item} />;
+            {allShoes.map((allShoe) => {
+              return <SneakerCard key={allShoe._id} item={allShoe} />;
             })}
           </ShoeGrid>
           ) : (

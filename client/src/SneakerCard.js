@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const SneakerCard= ({item}) => {
   return (
     <Card>
-    <Link to={`/getsneaker/${item._id}`}>
+    <Link to={`/getSneaker/${item._id}`}>
       <ShoeImage src={item.shoeURL} alt={item.name}/>
       </Link>
       <ShoeName>{item.name}</ShoeName>

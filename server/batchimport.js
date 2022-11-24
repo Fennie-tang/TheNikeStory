@@ -1,4 +1,4 @@
-const SneakersDataArray = require("./data/sneakers.json");
+const SneakersDataArray = require("./data/sneakers");
 
 const { MongoClient } = require("mongodb")
 
