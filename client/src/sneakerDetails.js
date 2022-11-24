@@ -7,7 +7,7 @@ const sneakerDetails = ()=> {
   const [item, setItem] = useState();
 
   useEffect(() => {
-    fetch(`/getsneaker/${_id}`)
+    fetch(`/getSneaker/${_id}`)
       .then((res) => res.json())
       .then((data) => setItem(data.data))
       .catch((err) => console.log(err));
