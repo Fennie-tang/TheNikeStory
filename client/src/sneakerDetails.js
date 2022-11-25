@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
+import UploadPic from "./UploadPic";
 
 const SneakerDetails = () => {
   const { _id } = useParams();
@@ -8,6 +9,7 @@ const SneakerDetails = () => {
   const [newComment, setNewComment] = useState("");
   const [comment, setComment] = useState(false);
   const [existingComments, setExistingComments] = useState([]);
+  const [uploadedImage, setUploadedImage] = useState("");
 
 
   console.log("existingComments", existingComments);
@@ -22,7 +24,8 @@ const SneakerDetails = () => {
   useEffect(() => {
     fetch(`/getAllComments/${_id}`)
       .then((res) => res.json())
-      .then((data) => { console.log("here", data) })
+      .then((data) => { setExistingComments(data.data) })
+
       .catch((err) => console.log(err));
   }, [_id]);
 
@@ -33,31 +36,47 @@ const SneakerDetails = () => {
       headers: {
         "Content-Type": 'application/json'
       },
-      body: JSON.stringify({ newComment, _id })
+      body: JSON.stringify({ newComment, _id, uploadedImage })
 
     })
       .then((res) => res.json())
       .then((data) => {
         setComment(!comment);
         setNewComment("");
+        setUploadedImage("");
       })
       .catch((err) => console.log(err));
   }
   const handleChange = (e) => {
     setNewComment(e.target.value);
   }
+
+  const deleteComment = () => {
+    fetch(`/deleteComment/${_id}/:user`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ newComment, _id }),
+    })
+      .then((res) => res.json())
+      .catch((err) => console.log(err));
+  };
+
+
+
   return (
     <Div>
       {console.log(item)}
       {item ? (
         <BigWrapper>
+          <h1>{item.name}</h1>
           <Wrapper>
             <div>
               <img src={item.shoeURL} alt={item.name} />
             </div>
             <ShoeInfo>
-              <div>{item.name}</div>
-              <div>{item.year}</div>
+              <div className="year">{item.year}</div>
               <div>{item.category}</div>
               <div>{item.description}</div>
             </ShoeInfo>
@@ -73,7 +92,15 @@ const SneakerDetails = () => {
               onChange={handleChange}
             ></textarea>
             <button onClick={handleCreateComment}>Submit</button>
-            <button className="cloudinary-button">Upload Pictures</button>
+            <UploadPic setUploadedImage={setUploadedImage} />
+          </div>
+          <div>{existingComments.length !== 0 && existingComments.map(comment => {
+            console.log(comment)
+            return (
+              <h1>{comment.comment}</h1>
+
+            )
+          })}
           </div>
         </BigWrapper>
       ) : (
@@ -85,8 +112,20 @@ const SneakerDetails = () => {
   )
 }
 export default SneakerDetails
-
+const Div = styled.div`
+  height: 100vh;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  background: #f0ead6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  `
 const BigWrapper = styled.div`
+h1{
+  text-align: center;
+  font-size: 30px;
+}
+
 .textBox{
   position: relative;
     width: 500px;
@@ -103,15 +142,6 @@ const BigWrapper = styled.div`
     resize: none;
     outline: none;
   }
-  `
-
-const Div = styled.div`
-  height: 100vh;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  background: #f0ead6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   `
 const Wrapper = styled.div`
   display: grid;
@@ -132,4 +162,10 @@ const Wrapper = styled.div`
   `
 const ShoeInfo = styled.div`
   width: 300px;
+  .year{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
   `

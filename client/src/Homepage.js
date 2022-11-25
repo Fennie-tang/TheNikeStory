@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import SneakerCard from "./SneakerCard"
 import { useState, useEffect } from "react";
+import banner from "./assets/banner.jpeg"
 
-const Homepage = ()=> {
+const Homepage = () => {
   const [allShoes, setAllShoes] = useState();
 
   useEffect(() => {
@@ -10,25 +11,34 @@ const Homepage = ()=> {
       .then((res) => res.json())
       .then((data) => setAllShoes(data.data))
       .catch((err) => console.log(err));
-  }, );
-  return(
+  }, []);
+  return (
     <>
-    {allShoes ? (
-          <ShoeGrid>
-            {allShoes.map((allShoe) => {
-              return <SneakerCard key={allShoe._id} item={allShoe} />;
-            })}
-          </ShoeGrid>
-          ) : (
-            <Loading>
-              <p> Loading...</p>
-            </Loading>
-          )}
+    <StyledDiv>
+      <BannerImg src={banner}/>
+      {allShoes ? (
+        <ShoeGrid>
+          {allShoes.map((allShoe) => {
+            return <SneakerCard key={allShoe._id} item={allShoe} />;
+          })}
+        </ShoeGrid>
+      ) : (
+        <Loading>
+          <p> Loading...</p>
+        </Loading>
+      )}
+      </StyledDiv>
     </>
   )
 }
 
 export default Homepage
+
+const StyledDiv=styled.div``
+
+const BannerImg=styled.img`
+width:100%;
+`
 
 const ShoeGrid = styled.div`
   padding-top: 50px;

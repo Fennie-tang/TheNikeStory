@@ -18,7 +18,7 @@ const createComment = async (req, res) => {
 
     await client.connect();
     const db = client.db("TheNikeStory");
-
+    console.log(req.body)
     const comment = req.body.newComment;
     const user = req.body.email;
 
@@ -52,13 +52,10 @@ const getAllComments = async (req, res) => {
 
     const db = client.db("TheNikeStory");
 
-    const allComments = await db.collection("sneakers").find().toArray();
+    const allComments = await db.collection("sneakers").find({ _id: sneakerId }).toArray();
 
-    const sneakerComments = allComments.filter((comment) => comment._id === sneakerId)
-
-
-    res.status(200).json({ status: 200, data: sneakerComments });
-    client.close();
+    res.status(200).json({ status: 200, data: allComments[0].comments });
+    // client.close();
   } catch (err) {
     res.status(400).json({ status: 400, message: "Error! getting Shoe" });
   }

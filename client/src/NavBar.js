@@ -1,23 +1,25 @@
 import styled from "styled-components"
 import { NavLink } from "react-router-dom";
-import {SiNike} from "react-icons/si"
+import { SiNike } from "react-icons/si"
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
+import SearchBar from "./SearchBar";
 const NavBar = () => {
   const { user, isAuthenticated } = useAuth0()
   return (
     <Wrapper>
       <nav>
         <ul>
-      <LinkItem to="/">
-<SiNike size="20"/>
-      </LinkItem>
-      <LinkItem to="/">
-        <li>Home</li>
-      </LinkItem>
-      <li> {isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
-      </ul>
+          {/* <SearchBar /> */}
+          <LinkItem to="/">
+            <SiNike size="20" />
+          </LinkItem>
+          <LinkItem to="/">
+            <li>Home</li>
+          </LinkItem>
+          <li> {isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
+        </ul>
       </nav>
     </Wrapper>
   )
@@ -31,6 +33,8 @@ const Wrapper = styled.div`
   nav {
     ul {
       display: flex;
+      margin-left:15px;
+      margin-right:15px;
       /* align-items: center; */
       justify-content: space-between;
       list-style: none;
@@ -38,7 +42,7 @@ const Wrapper = styled.div`
     }
   }
   `
-  const LinkItem = styled(NavLink)`
+const LinkItem = styled(NavLink)`
   text-decoration: none;
   color: white;
   padding-right: 20px;
