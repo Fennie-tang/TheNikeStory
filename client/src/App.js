@@ -13,9 +13,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <NavBar >
-        {/* {isAuthenticated ? <LogoutButton /> : <LoginButton />} */}
-      </NavBar>
+      <NavBar/>
+        
+     
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/getSneaker/:_id" element={<SneakerDetails />} />

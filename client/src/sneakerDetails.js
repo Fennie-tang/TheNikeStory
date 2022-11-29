@@ -19,9 +19,6 @@ const SneakerDetails = () => {
 	const [updatedComment, setUpdatedComment] = useState('');
 	const [refetch, setRefetch] = useState(false);
 
-	// console.log(uploadedImage)
-
-	// console.log("existingComments", existingComments);
 	useEffect(() => {
 		fetch(`/getSneaker/${_id}`)
 			.then((res) => res.json())
@@ -43,7 +40,6 @@ const SneakerDetails = () => {
 	const handleCreateComment = (e) => {
 		setCommentCounter(commmentCounter + 1);
 		e.preventDefault();
-		// console.log(newComment)
 		fetch(`/createComment`, {
 			method: 'POST',
 			headers: {
@@ -157,7 +153,6 @@ const SneakerDetails = () => {
 						<div>
 							{existingComments &&
 								existingComments.map((comment) => {
-									// console.log(comment);
 									return (
 										<>
 											<CommentSection>
@@ -194,7 +189,7 @@ const SneakerDetails = () => {
 														</form>
 													</>
 												)}
-												{comment.image && <img alt="" src={comment.image} />}
+												{comment.image && <img alt='' src={comment.image} />}
 											</CommentSection>
 										</>
 									);

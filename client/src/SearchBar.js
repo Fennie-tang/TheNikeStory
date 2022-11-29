@@ -53,16 +53,16 @@ const SearchBar = () => {
           <div className="container">
             {matchedSuggestions.length > 0 && (
               <SuggestionsList>
-                {matchedSuggestions.map((suggestion, _id, imageSrc) => {
+                {matchedSuggestions.map((suggestion, _id, shoeURL) => {
                   return (
                     // We made this a clickable link to go to each item by its id
                     <SuggestionLink
                       key={_id}
-                      to={`/items/${suggestion._id}`}
+                      to={`/getSneaker/${suggestion._id}`}
                       onClick={() => handleSelect(suggestion)}
                     >
                       <li className="miniDiv">
-                        <Image src={suggestion.imageSrc} alt="miniImages" />
+                        <Image src={suggestion.shoeURL} alt="miniImages" />
                         {suggestion.name.slice(
                           0,
                           suggestion.name
@@ -90,14 +90,14 @@ const SearchBar = () => {
 };
 export default SearchBar
 const StyleForm = styled.form`
-  background-color: #002b5b;
+  background-color: #023f05;
   position: relative;
   height: 40px;
   z-index: 2;
 
   :hover .inputSearch {
     width: 350px;
-    background: #292c6d;
+    background: #023f05;
     border-radius: 10px;
   }
 
@@ -112,7 +112,7 @@ const StyleForm = styled.form`
     right: 18px;
     transform: translate(-50%, -50%);
     font-size: 26px;
-    color: #e9d5da;
+    color: white;
     transition: 0.2s;
   }
   .inputSearch {
@@ -120,7 +120,7 @@ const StyleForm = styled.form`
     width: 30px;
     height: 30px;
     background: none;
-    border: 4px solid #51557e; //test color
+    border: 4px solid #f5f5f5; //test color
     border-radius: 50px;
     box-sizing: border-box;
     font-family: Comic Sans MS;

@@ -108,7 +108,7 @@ const deleteComment = async (req, res) => {
 
     const updatedComments = sneakerComments.comments.filter((comment) => comment.counter !== commentId)
 
-    console.log("updatedComments", updatedComments);
+    // console.log("updatedComments", updatedComments);
     await db.collection("sneakers").updateOne({ _id: _id }, { $set: { comments: updatedComments } })
 
 

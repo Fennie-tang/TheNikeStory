@@ -11,13 +11,13 @@ const NavBar = () => {
     <Wrapper>
       <nav>
         <ul>
-          {/* <SearchBar /> */}
+          <SearchBar />
           <LinkItem to="/">
             <SiNike size="30" />
           </LinkItem>
-          {/* <LinkItem to="About">
+          <LinkItem to="About">
             <li>About</li>
-            </LinkItem> */}
+            </LinkItem>
           <LinkItem to="/">
             <li>The Nike Story</li>
           </LinkItem>
@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   padding:0;
   background-color: #023f05;
   height: 70px;
+  
 
   nav {
     ul {
