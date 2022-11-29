@@ -14,9 +14,11 @@ const SneakerDetails = () => {
 	const [isDeleted, setIsDeleted] = useState(false);
 	const [isUpdate, setIsUpdate] = useState(false);
 	const [commentToUpdate, setCommentToUpdate] = useState(0);
-	const { loginWithRedirect, user } = useAuth0();
-
+	const { user } = useAuth0();
 	const [commmentCounter, setCommentCounter] = useState(0);
+	const [updatedComment, setUpdatedComment] = useState('');
+	const [refetch, setRefetch] = useState(false);
+
 	// console.log(uploadedImage)
 
 	// console.log("existingComments", existingComments);
@@ -36,7 +38,7 @@ const SneakerDetails = () => {
 			})
 
 			.catch((err) => console.log(err));
-	}, [_id, comment, isDeleted]);
+	}, [_id, comment, isDeleted, refetch]);
 
 	const handleCreateComment = (e) => {
 		setCommentCounter(commmentCounter + 1);
@@ -99,14 +101,21 @@ const SneakerDetails = () => {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify({
-				commnet:newComment,
+				comment: updatedComment,
 				_id,
-				image:uploadedImage,
+				image: uploadedImage,
 				user: user.email,
 			}),
 		})
 			.then((res) => res.json())
+			.then((data) => {
+				setRefetch(!refetch);
+				setIsUpdate(false);
+			})
 			.catch((err) => console.log(err));
+	};
+	const handleUpdatedChange = (e) => {
+		setUpdatedComment(e.target.value);
 	};
 
 	return (
@@ -148,7 +157,7 @@ const SneakerDetails = () => {
 						<div>
 							{existingComments &&
 								existingComments.map((comment) => {
-									console.log(comment);
+									// console.log(comment);
 									return (
 										<>
 											<CommentSection>
@@ -176,12 +185,16 @@ const SneakerDetails = () => {
 													<>
 														<form onSubmit={UpdateHandler}>
 															<UploadPic setUploadedImage={setUploadedImage} />
-															<input type='text' />
+															<input
+																type='text'
+																value={updatedComment}
+																onChange={handleUpdatedChange}
+															/>
 															<button>Save</button>
 														</form>
 													</>
 												)}
-												{comment.image && <img src={comment.image} />}
+												{comment.image && <img alt="" src={comment.image} />}
 											</CommentSection>
 										</>
 									);

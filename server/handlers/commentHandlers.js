@@ -12,7 +12,7 @@ const options = {
 };
 
 const createComment = async (req, res) => {
-  console.log("hello", req.body)
+  // console.log("hello", req.body)
   const client = new MongoClient(MONGO_URI, options);
   try {
 
@@ -77,7 +77,7 @@ const updateComment = async (req, res) => {
 
   const sneakerComments = await db.collection("sneakers").findOne({ _id: _id })
 
-  const updatedComments = sneakerComments.comments.map((item) => item.counter === commentId ? { ...item, comment: req.body.comment, image: req.body.image } : comment)
+  const updatedComments = sneakerComments.comments.map((item) => item.counter === commentId ? { ...item, comment: req.body.comment, image: req.body.image } : item)
 
   await db.collection("sneakers").updateOne({ _id: _id }, { $set: { comments: updatedComments } })
 
