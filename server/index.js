@@ -22,8 +22,8 @@ express()
   ///comments
   .get("/getAllComments/:sneakerId", getAllComments)
   .post("/createComment", createComment)
-  .patch("/updateComment/:_id/:user", updateComment)
-  .delete("/deleteComment/:_id/:user", deleteComment)
+  .patch("/updateComment/:_id/:commentId", updateComment)
+  .delete("/deleteComment/:_id/:commentId", deleteComment)
 
 
 

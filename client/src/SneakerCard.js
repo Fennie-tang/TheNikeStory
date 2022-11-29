@@ -16,7 +16,7 @@ const Card=styled.div`
 display: flex;
   flex-direction: column;
   width: 250px;
-  height: 300px;
+  height: 275px;
   box-shadow: 0 0 10px gray;
   border-radius: 8px;
   align-items: center;
@@ -25,6 +25,7 @@ display: flex;
   const ShoeName = styled.p`
   margin: 20px 0 30px 0;
   height: 30px;
+  font-size: 18px;
   /* font-weight: bold; */
   color: #484848;
 `;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useRef } from "react"
 
-const UploadPic = ({setUploadedImage}) => {
+const UploadPic = ({ setUploadedImage }) => {
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
   useEffect(() => {
@@ -11,12 +11,12 @@ const UploadPic = ({setUploadedImage}) => {
       uploadPreset: 'zhgtsery'
     },
       function (error, result) {
-        // console.log(result.data.info.files[0].uploadInfo.url);
+        console.log(result.data.info.files[0].uploadInfo.url);
         setUploadedImage(result.data.info.files[0].uploadInfo.url)
       })
   }, [])
   return (
-    <button onClick={() => widgetRef.current.open()}>
+    <button onClick={(e) => { e.preventDefault(); e.stopPropagation(); widgetRef.current.open() }}>
       Upload Image
     </button>
   )

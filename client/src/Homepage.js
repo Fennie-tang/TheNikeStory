@@ -2,9 +2,11 @@ import styled from "styled-components"
 import SneakerCard from "./SneakerCard"
 import { useState, useEffect } from "react";
 import banner from "./assets/banner.jpeg"
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Homepage = () => {
   const [allShoes, setAllShoes] = useState();
+  const { loginWithRedirect, user } = useAuth0();
 
   useEffect(() => {
     fetch(`/getAllSneakers`)
@@ -12,6 +14,12 @@ const Homepage = () => {
       .then((data) => setAllShoes(data.data))
       .catch((err) => console.log(err));
   }, []);
+  if (
+    user
+  ) {
+    console.log(user)
+  }
+
   return (
     <>
     <StyledDiv>

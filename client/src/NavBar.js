@@ -13,10 +13,13 @@ const NavBar = () => {
         <ul>
           {/* <SearchBar /> */}
           <LinkItem to="/">
-            <SiNike size="20" />
+            <SiNike size="30" />
           </LinkItem>
+          {/* <LinkItem to="About">
+            <li>About</li>
+            </LinkItem> */}
           <LinkItem to="/">
-            <li>Home</li>
+            <li>The Nike Story</li>
           </LinkItem>
           <li> {isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
         </ul>
@@ -27,18 +30,22 @@ const NavBar = () => {
 export default NavBar
 
 const Wrapper = styled.div`
+  margin: 0;
+  padding:0;
   background-color: #023f05;
-  height: 50px;
+  height: 70px;
 
   nav {
     ul {
       display: flex;
       margin-left:15px;
       margin-right:15px;
-      /* align-items: center; */
+      padding-top: 20px;
+      align-items: center;
       justify-content: space-between;
       list-style: none;
-      padding-top:10px;
+      font-size: 20px;
+      /* padding-top:35px; */
     }
   }
   `
