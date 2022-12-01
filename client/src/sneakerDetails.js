@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import UploadPic from './UploadPic';
 import { useAuth0 } from '@auth0/auth0-react';
+import Loading from './Loading';
 
 const SneakerDetails = () => {
 	const { _id } = useParams();
@@ -15,7 +16,7 @@ const SneakerDetails = () => {
 	const [isUpdate, setIsUpdate] = useState(false);
 	const [commentToUpdate, setCommentToUpdate] = useState(0);
 	const { user } = useAuth0();
-	const [commmentCounter, setCommentCounter] = useState(0);
+	const [commentCounter, setCommentCounter] = useState(0);
 	const [updatedComment, setUpdatedComment] = useState('');
 	const [refetch, setRefetch] = useState(false);
 
@@ -38,7 +39,7 @@ const SneakerDetails = () => {
 	}, [_id, comment, isDeleted, refetch]);
 
 	const handleCreateComment = (e) => {
-		setCommentCounter(commmentCounter + 1);
+		setCommentCounter(commentCounter + 1);
 		e.preventDefault();
 		fetch(`/createComment`, {
 			method: 'POST',
@@ -50,7 +51,7 @@ const SneakerDetails = () => {
 				_id,
 				uploadedImage,
 				user: user.email,
-				counter: commmentCounter,
+				counter: commentCounter,
 			}),
 		})
 			.then((res) => res.json())
@@ -157,7 +158,6 @@ const SneakerDetails = () => {
 										<>
 											<CommentSection>
 												<p>{comment.comment}</p>
-
 												{comment.user === user.email && (
 													<button
 														value={comment.counter}
@@ -199,7 +199,7 @@ const SneakerDetails = () => {
 				</BigWrapper>
 			) : (
 				<div>
-					<p>Loading...</p>
+				<Loading/>
 				</div>
 			)}
 		</>

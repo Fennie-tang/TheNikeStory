@@ -146,11 +146,14 @@ const StyleForm = styled.form`
 `;
 
 const SuggestionsList = styled.ul`
+display: flex;
+flex-direction: column;
   /* margin-top: 250px; */
   z-index: 2;
   .miniDiv {
-    width: 100%;
-    height: 200px;
+    display: flex;
+    width: 300px;
+    height: 100px;
     align-items: center;
     background-color: white;
     box-shadow: 5px 10px 20px #888888;
@@ -182,10 +185,8 @@ const Prediction = styled.span`
   font-weight: bold;
   display: inline;
   font-weight: bold;
+  
 
-  .price {
-    background-color: #faf9f6;
-  }
 `;
 
 const Image = styled.img`
@@ -193,8 +194,7 @@ const Image = styled.img`
   position: relative;
   width: 80px;
   height: 80px;
-  margin-bottom: 20px;
-  margin-top: 8px;
+  margin: 15px 15px 20px 10px;
   border: 1px solid #0e5e6f;
   border-radius: 10%;
   /* overflow-y: auto; */

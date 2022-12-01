@@ -13,14 +13,11 @@ const NavBar = () => {
         <ul>
           <SearchBar />
           <LinkItem to="/">
-            <SiNike size="30" />
-          </LinkItem>
+            <li>The Nike Story </li>
+          </LinkItem> <SiNike color="white" size="30" />
           <LinkItem to="About">
             <li>About</li>
             </LinkItem>
-          <LinkItem to="/">
-            <li>The Nike Story</li>
-          </LinkItem>
           <li> {isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
         </ul>
       </nav>

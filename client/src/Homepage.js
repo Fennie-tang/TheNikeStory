@@ -3,6 +3,7 @@ import SneakerCard from "./SneakerCard"
 import { useState, useEffect } from "react";
 import banner from "./assets/banner.jpeg"
 import { useAuth0 } from "@auth0/auth0-react";
+import Loading from "./Loading";
 
 const Homepage = () => {
   const [allShoes, setAllShoes] = useState();
@@ -27,13 +28,11 @@ const Homepage = () => {
       {allShoes ? (
         <ShoeGrid>
           {allShoes.map((allShoe) => {
-            return <SneakerCard key={allShoe._id} item={allShoe} />;
+            return <SneakerCard key={allShoe._id} item={allShoe} />
           })}
         </ShoeGrid>
       ) : (
-        <Loading>
-          <p> Loading...</p>
-        </Loading>
+        <Loading/> 
       )}
       </StyledDiv>
     </>
@@ -57,9 +56,4 @@ const ShoeGrid = styled.div`
   margin-bottom: 30px;
 `;
 
-const Loading = styled.div`
-  /* display: flex;
-  justify-content: center;
-  padding-top: 20vh;
-  height: 80vh; */
-`;
+
