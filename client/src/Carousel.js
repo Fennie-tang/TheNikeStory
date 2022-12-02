@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import NikePassport from "./assets/passportNike.jpeg"
 const Carousel= () => {
   return (
     <Div>
       <div className="gallery">
       <img
-        src="https://images.unsplash.com/photo-1626947346165-4c2288dadc2a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+        src={NikePassport}
         alt="booth"
       />
       <img

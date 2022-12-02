@@ -112,7 +112,7 @@ const deleteComment = async (req, res) => {
     await db.collection("sneakers").updateOne({ _id: _id }, { $set: { comments: updatedComments } })
 
 
-    res.status(204).json({ status: 204, _id })
+    res.status(200).json({ status: 200, _id })
   } catch (err) {
     res.status(404).json({ status: 404, message: "comment was not deleted" })
   }

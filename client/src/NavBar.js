@@ -29,8 +29,9 @@ export default NavBar
 const Wrapper = styled.div`
   margin: 0;
   padding:0;
-  background-color: #023f05;
+  background-color: #404348;
   height: 70px;
+  border-bottom: solid 2px black;
   
 
   nav {
@@ -53,11 +54,11 @@ const LinkItem = styled(NavLink)`
   padding-right: 20px;
   padding-left: 10px;
 
-  &.active {
+  /* &.active {
     li {
       color: darkgray;
     }
-  }
+  } */
 
   :hover {
     color: darkgray;

@@ -17,8 +17,10 @@ const Button=styled.button`
 padding: 8px 12px 8px 12px;
 border-radius: 3px;
 border: none;
-background-color:#DAA520;
+background-color:#201A1E;
+color: white;
+font-family: 'Times New Roman', Times, serif;
 
 &:hover{
-  background-color:#FFD700;
+  background-color:grey;
 }`

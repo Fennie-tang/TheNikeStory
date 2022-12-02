@@ -19,6 +19,7 @@ const SneakerDetails = () => {
 	const [commentCounter, setCommentCounter] = useState(0);
 	const [updatedComment, setUpdatedComment] = useState('');
 	const [refetch, setRefetch] = useState(false);
+	const [refetchDelete, setRefetchDelete] = useState(false)
 
 	useEffect(() => {
 		fetch(`/getSneaker/${_id}`)
@@ -67,8 +68,9 @@ const SneakerDetails = () => {
 	};
 
 	const deleteComment = (e) => {
+		e.preventDefault();
 		const commentId = e.target.value;
-		setIsDeleted(!isDeleted);
+
 		fetch(`/deleteComment/${_id}/${commentId}`, {
 			method: 'DELETE',
 			headers: {
@@ -82,7 +84,9 @@ const SneakerDetails = () => {
 			}),
 		})
 			.then((res) => res.json())
+			.then((data) => setIsDeleted(!isDeleted))
 			.catch((err) => console.log(err));
+		// setRefetchDelete(!refetchDelete)
 	};
 	const updateComment = (e, counter) => {
 		setIsUpdate(true);
@@ -133,6 +137,7 @@ const SneakerDetails = () => {
 						<p>{item.description}</p>
 					</ShoeInfo>
 					{/* </Wrapper> */}
+					<CreateComment>
 					<Form
 						onSubmit={(e) => {
 							handleCreateComment(e);
@@ -149,6 +154,8 @@ const SneakerDetails = () => {
 							<UploadPic setUploadedImage={setUploadedImage} />
 						</ButtonDiv>
 					</Form>
+					
+					</CreateComment>
 
 					<Comments>
 						<div>
@@ -158,7 +165,7 @@ const SneakerDetails = () => {
 										<>
 											<CommentSection>
 												<p>{comment.comment}</p>
-												{comment.user === user.email && (
+												{user && comment.user === user.email && (
 													<button
 														value={comment.counter}
 														onClick={deleteComment}
@@ -166,7 +173,7 @@ const SneakerDetails = () => {
 														Delete
 													</button>
 												)}
-												{comment.user === user.email && (
+												{user && comment.user === user.email && (
 													<button
 														value={comment.counter}
 														onClick={(e) => {
@@ -199,7 +206,7 @@ const SneakerDetails = () => {
 				</BigWrapper>
 			) : (
 				<div>
-				<Loading/>
+					<Loading />
 				</div>
 			)}
 		</>
@@ -209,7 +216,7 @@ export default SneakerDetails;
 const BigWrapper = styled.div`
 	margin: 0;
 	height: 100%;
-	background-color: #f0ead6;
+	background-color: #E4D4C8;
 	width: 100%;
 	h1 {
 		text-align: center;
@@ -225,22 +232,31 @@ const BigWrapper = styled.div`
 `;
 const Image = styled.image`
 	display: flex;
-	justify-content: center;
-	margin-left: 300px;
+	justify-content: center; 
+	img{
 	height: 375px;
-	width: 600px;
+	width: 550px;
 	border-radius: 8px;
 	margin-bottom: 20px;
 	margin-top: 30px;
 	/* box-shadow: 0 0 8px 8px white inset; */
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	}
 `;
+const CreateComment=styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-bottom: 50px;
+`
 const Form = styled.form`
-	margin: 20px 0 20px 0;
-	display: flex;
-	justify-content: center;
+	/* display: flex; */
+	
+	/* justify-content: center; */
 	input {
+		justify-content: center;
+		margin: 0;
 		width: 550px;
 		height: 100px;
 	}
@@ -248,6 +264,15 @@ const Form = styled.form`
 const ButtonDiv = styled.div`
 	display: flex;
 	justify-content: center;
+	gap: 10px;
+	
+	button{
+		border:none;
+		border-radius: 5px;
+		background-color: grey;
+		color:white;
+		padding:5px;
+	}
 `;
 const ShoeInfo = styled.div`
 	margin: 15px;

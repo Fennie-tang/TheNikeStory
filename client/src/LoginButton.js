@@ -12,12 +12,13 @@ const LoginButton = () => {
 export default LoginButton;
 
 const Button = styled.button`
-padding: 8px 12px 8px 12px;
+padding: 8px 14px 8px 14px;
 border-radius: 3px;
 border: none;
-background-color:#DAA520;
+background-color:#201A1E;
 font-weight: bold;
-color: #f5f5f5;
+color: white;
+font-family: 'Times New Roman', Times, serif;
 &:hover{
-  background-color:#FFD700;
+  background-color:grey;
 }`

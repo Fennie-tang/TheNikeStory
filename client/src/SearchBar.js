@@ -90,14 +90,14 @@ const SearchBar = () => {
 };
 export default SearchBar
 const StyleForm = styled.form`
-  background-color: #023f05;
+  background-color: #404348;
   position: relative;
   height: 40px;
   z-index: 2;
 
   :hover .inputSearch {
     width: 350px;
-    background: #023f05;
+    background: #404348;
     border-radius: 10px;
   }
 
@@ -125,12 +125,12 @@ const StyleForm = styled.form`
     box-sizing: border-box;
     font-family: Comic Sans MS;
     font-size: 20px;
-    color: #faedf0;
+    color: white;
     outline: none;
     transition: 0.5s;
   }
   .inputSearch::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -169,7 +169,7 @@ flex-direction: column;
   }
 
   .miniDiv:hover {
-    background-color: #faf9f6;
+    background-color: #E2E6E7;
     border: 4px solid #0e5e6f;
     transition: 0.3s ease-in-out;
   }

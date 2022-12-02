@@ -11,7 +11,6 @@ const options = {
 };
 
 const batchImport = async () => {
-  console.log("hello")
   const client = await new MongoClient(MONGO_URI, options)
   await client.connect()
   console.log ("connected")
