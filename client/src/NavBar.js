@@ -11,14 +11,21 @@ const NavBar = () => {
     <Wrapper>
       <nav>
         <ul>
-          <SearchBar />
+          <LeftSide>
           <LinkItem to="/">
-            <li>The Nike Story </li>
-          </LinkItem> <SiNike color="white" size="30" />
-          <LinkItem to="About">
-            <li>About</li>
+            {/* <li>The Nike Story </li> */}
+          
+        <SiNike color="white" size="30" />
+        </LinkItem> 
+          <SearchBar />
+          
+          </LeftSide>
+          <RightSide>
+          <LinkItem to="ShoePage">
+            <li>30 Iconics</li>
             </LinkItem>
           <li> {isAuthenticated ? <LogoutButton /> : <LoginButton />}</li>
+          </RightSide>
         </ul>
       </nav>
     </Wrapper>
@@ -29,7 +36,7 @@ export default NavBar
 const Wrapper = styled.div`
   margin: 0;
   padding:0;
-  background-color: #404348;
+  background-color: #272b2e;
   height: 70px;
   border-bottom: solid 2px black;
   
@@ -44,6 +51,17 @@ const Wrapper = styled.div`
       justify-content: space-between;
       list-style: none;
       font-size: 20px;
+      font-family: "futura-pt-condensed", sans-serif; 
+      font-weight: 600;
+      text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 52px #0fa,
+      0 0 62px #0fa,
+      0 0 65px #0fa,
+      0 0 70px #0fa;
       /* padding-top:35px; */
     }
   }
@@ -65,3 +83,9 @@ const LinkItem = styled(NavLink)`
     transition: 0.3s ease-in-out;
   }
 `;
+const LeftSide=styled.div`
+display: flex;
+gap: 15px;`
+const RightSide=styled.div`
+display:flex;
+gap:20px`

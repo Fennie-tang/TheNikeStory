@@ -16,9 +16,10 @@ padding: 8px 14px 8px 14px;
 border-radius: 3px;
 border: none;
 background-color:#201A1E;
+font-family: "futura-pt-condensed", sans-serif; 
 font-weight: bold;
 color: white;
-font-family: 'Times New Roman', Times, serif;
+
 &:hover{
   background-color:grey;
 }`

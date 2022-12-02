@@ -6,7 +6,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
 import Homepage from "./Homepage";
 import SneakerDetails from "./SneakerDetails";
-import About from "./About";
+import ShoePage from "./ShoePage"
 const App = () => {
 
   // const { user, isAuthenticated } = useAuth0()
@@ -19,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/getSneaker/:_id" element={<SneakerDetails />} />
-        <Route path="About" element={<About />} />
+        <Route path="ShoePage" element={<ShoePage />} />
       </Routes>
     </BrowserRouter>
   );

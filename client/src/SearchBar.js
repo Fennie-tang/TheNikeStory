@@ -90,14 +90,14 @@ const SearchBar = () => {
 };
 export default SearchBar
 const StyleForm = styled.form`
-  background-color: #404348;
+  background-color: #272b2e;
   position: relative;
   height: 40px;
   z-index: 2;
 
   :hover .inputSearch {
     width: 350px;
-    background: #404348;
+    background: #272b2e;
     border-radius: 10px;
   }
 

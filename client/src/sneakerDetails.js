@@ -126,35 +126,37 @@ const SneakerDetails = () => {
 				<BigWrapper>
 					<h1>{item.name}</h1>
 					<div className='year'>{item.year}</div>
-					{/* <Wrapper> */}
+					<Wrapper>
 
-					<Image>
-						<img src={item.shoeURL} alt={item.name} />
-					</Image>
+						<Image>
+							<img src={item.shoeURL} alt={item.name} />
+						</Image>
 
-					<ShoeInfo>
-						<p>{item.category}</p>
-						<p>{item.description}</p>
-					</ShoeInfo>
-					{/* </Wrapper> */}
+						<ShoeInfo>
+							<p>{item.category}</p>
+							<p>{item.description}</p>
+						</ShoeInfo>
+					</Wrapper>
 					<CreateComment>
-					<Form
-						onSubmit={(e) => {
-							handleCreateComment(e);
-						}}
-					>
-						<input
-							type='text'
-							value={newComment}
-							placeholder="What's your opinion?"
-							onChange={handleChange}
-						/>
-						<ButtonDiv>
-							<button type='submit'>Submit</button>
-							<UploadPic setUploadedImage={setUploadedImage} />
-						</ButtonDiv>
-					</Form>
-					
+						<Form
+							onSubmit={(e) => {
+								handleCreateComment(e);
+							}}
+						>
+							<textarea
+								rows={5}
+							
+								type='text'
+								value={newComment}
+								placeholder="What's your opinion?"
+								onChange={handleChange}
+							/>
+							<ButtonDiv>
+								<button type='submit'>Submit</button>
+								<UploadPic setUploadedImage={setUploadedImage} />
+							</ButtonDiv>
+						</Form>
+
 					</CreateComment>
 
 					<Comments>
@@ -216,11 +218,15 @@ export default SneakerDetails;
 const BigWrapper = styled.div`
 	margin: 0;
 	height: 100%;
-	background-color: #E4D4C8;
+	background-image:url("/banner.jpeg");
+	/* filter: contrast(1.75); */
+	background-size: cover;
+	/* background-color: #E4D4C8; */
 	width: 100%;
 	h1 {
 		text-align: center;
 		font-size: 30px;
+		color:white;
 	}
 	.year {
 		text-align: center;
@@ -228,14 +234,21 @@ const BigWrapper = styled.div`
 		margin-top: 5px;
 		font-weight: bold;
 		font-size: 20px;
+		color:white;
 	}
 `;
+const Wrapper = styled.div`
+	display: grid;
+  grid-template-columns: 500px 500px;
+  justify-content: center;
+  align-items: center;
+  `
 const Image = styled.image`
 	display: flex;
 	justify-content: center; 
 	img{
 	height: 375px;
-	width: 550px;
+	width: 500px;
 	border-radius: 8px;
 	margin-bottom: 20px;
 	margin-top: 30px;
@@ -244,21 +257,24 @@ const Image = styled.image`
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 	}
 `;
-const CreateComment=styled.div`
+const CreateComment = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 margin-bottom: 50px;
 `
 const Form = styled.form`
-	/* display: flex; */
-	
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	border: 1px solid red;
+	gap: 16px;
 	/* justify-content: center; */
-	input {
+	textarea {
 		justify-content: center;
 		margin: 0;
 		width: 550px;
-		height: 100px;
+		
 	}
 `;
 const ButtonDiv = styled.div`
@@ -279,7 +295,10 @@ const ShoeInfo = styled.div`
 	width: 500px;
 	display: flex;
 	justify-content: center;
-	margin-left: 400px;
+	/* margin-left: 400px; */
+	p {
+		color: white;
+	}
 `;
 const Comments = styled.div`
 	margin-left: 300px;

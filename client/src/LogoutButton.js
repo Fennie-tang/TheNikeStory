@@ -19,7 +19,7 @@ border-radius: 3px;
 border: none;
 background-color:#201A1E;
 color: white;
-font-family: 'Times New Roman', Times, serif;
+font-family: "futura-pt-condensed", sans-serif; 
 
 &:hover{
   background-color:grey;
