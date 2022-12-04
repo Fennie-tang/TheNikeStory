@@ -29,18 +29,18 @@ const About = () => {
 
           <div className="social">
 
-            <Link to="https:www.facebook.com/nike/">
+            <a href="https:www.facebook.com/nike/">
               <BsFacebook size="30" />
-            </Link>
-            <Link to="https:twitter.com/nike">
+            </a>
+            <a href="https:twitter.com/nike">
               <AiFillTwitterCircle size="30" />
-            </Link>
-            <Link to="https:www.instagram.com/nike">
+            </a>
+            <a href="https:www.instagram.com/nike">
               <AiFillInstagram size="32" />
-            </Link>
-            <Link to="https:www.youtube.com/@nike">
+            </a>
+            <a href="https:www.youtube.com/@nike">
               <AiFillYoutube size="32" />
-            </Link>
+            </a>
           </div>
         </section>
         </Background>
