@@ -94,6 +94,7 @@ const StyleForm = styled.form`
   position: relative;
   height: 40px;
   z-index: 2;
+ 
 
   :hover .inputSearch {
     width: 350px;
@@ -114,6 +115,7 @@ const StyleForm = styled.form`
     font-size: 26px;
     color: white;
     transition: 0.2s;
+    font-family: "futura-pt-condensed", sans-serif;
   }
   .inputSearch {
     padding: 10px;
@@ -123,7 +125,7 @@ const StyleForm = styled.form`
     border: 4px solid #f5f5f5; //test color
     border-radius: 50px;
     box-sizing: border-box;
-    font-family: Comic Sans MS;
+    font-family: "futura-pt-condensed", sans-serif;
     font-size: 20px;
     color: white;
     outline: none;
@@ -132,6 +134,7 @@ const StyleForm = styled.form`
   .inputSearch::placeholder {
     color: white;
     font-size: 18px;
+    font-family: "futura-pt-condensed", sans-serif;
     letter-spacing: 2px;
     font-weight: 100;
   }
@@ -184,7 +187,7 @@ const SuggestionLink = styled(NavLink)`
 const Prediction = styled.span`
   font-weight: bold;
   display: inline;
-  font-weight: bold;
+  font-family: "futura-pt-condensed", sans-serif;
   
 
 `;

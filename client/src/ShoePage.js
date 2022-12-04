@@ -44,6 +44,7 @@ export default Homepage
 const StyledDiv=styled.div`
 background-image:url("/crumble.jpg");
 
+
 /* background-image:url("/street.jpeg"); */
 /* background-size: cover; */
 width:100%;
