@@ -218,11 +218,12 @@ export default SneakerDetails;
 const BigWrapper = styled.div`
 	margin: 0;
 	height: 100%;
-	background-image:url("/waves.jpg");
+	background-image:url("/waves5.jpg");
+	
 	/* filter: contrast(1.75); */
 	background-size: cover;
 	/* background-color: #E4D4C8; */
-	width: 100%;
+	/* width: 100%; */
 	h1 {
 		padding-top:20px;
 		font-family: "futura-pt-condensed", sans-serif;
@@ -264,7 +265,7 @@ const Image = styled.image`
 	width: 500px;
 	border-radius: 8px;
 	margin-bottom: 20px;
-	margin-top: 30px;
+	margin-top: 20px;
 	/* box-shadow: 0 0 8px 8px white inset; */
 	/* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
@@ -315,15 +316,18 @@ const ShoeInfo = styled.div`
 	justify-content: center;
 	padding:15px;
 	content: "";
-   background-color: rgba(128,128,128,0.55);
+   /* background-color: rgba(128,128,128,0.55); */
+	 /* background-image:url("/waves.jpg");
+	 -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
 	 border: none;
 
-  
-
-	/* margin-left: 400px; */
 	p {
-		color: #f5f5f5;
+		color: black;
+		opacity: 0.9;
 		font-family: "futura-pt-condensed", sans-serif;
+		/* mix-blend-mode: difference; */
+		
 	}
 `;
 const Comments = styled.div`
@@ -336,7 +340,7 @@ const Comments = styled.div`
 	width: 500px;
 
 	p {
-		background-color: white;
+		background-color: grey;
 		width: 300px;
 	}
 `;
@@ -346,7 +350,7 @@ const CommentSection = styled.div`
 	margin: 20px 0 20px 0;
 	border: 1px solid grey;
 	border-radius: 5px;
-	background-color: white;
+	background-color:grey;
 	img {
 		height: 275px;
 		width: 400px;

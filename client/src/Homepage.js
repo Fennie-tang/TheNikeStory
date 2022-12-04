@@ -11,12 +11,12 @@ const About = () => {
           <div className="video-container">
             <video src={NikeVideo} autoPlay loop muted />
           </div>
-          <div class="content">
+          <div className="content">
             <h1>The Nike Story</h1>
             <a href="#about" className="btn">Read More</a>
           </div>
         </section>
-
+<Background>
         <section id="about">
           <h1>The Beginning</h1>
           <p>
@@ -43,6 +43,7 @@ const About = () => {
             </Link>
           </div>
         </section>
+        </Background>
       </Div>
     </>
   )
@@ -147,6 +148,7 @@ h1 {
 
  .content {
    z-index: 2;
+   
  }
 
  .btn {
@@ -186,6 +188,10 @@ h1 {
    margin: 0 5px;
  
  }
+`
+const Background=styled.div`
+background:url("/evolution2.jpg") center center;
+/* background-size: cover; */
 `
 
 
