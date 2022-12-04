@@ -19,7 +19,7 @@ const SneakerDetails = () => {
 	const [commentCounter, setCommentCounter] = useState(0);
 	const [updatedComment, setUpdatedComment] = useState('');
 	const [refetch, setRefetch] = useState(false);
-	const [refetchDelete, setRefetchDelete] = useState(false)
+	// const [refetchDelete, setRefetchDelete] = useState(false)
 
 	useEffect(() => {
 		fetch(`/getSneaker/${_id}`)
@@ -323,9 +323,10 @@ const ShoeInfo = styled.div`
 	 border: none;
 
 	p {
-		color: black;
-		opacity: 0.9;
+		color: #f5f5f5;
+		opacity: 0.7;
 		font-family: "futura-pt-condensed", sans-serif;
+		/* -webkit-text-stroke: 1px grey; */
 		/* mix-blend-mode: difference; */
 		
 	}

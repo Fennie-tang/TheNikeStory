@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import SneakerCard from "./SneakerCard"
 import { useState, useEffect } from "react";
-import background from "./assets/background.jpeg"
 import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "./Loading";
 // import background from "./assets/neon.jpg"
