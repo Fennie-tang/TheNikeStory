@@ -155,7 +155,7 @@ flex-direction: column;
     width: 300px;
     height: 100px;
     align-items: center;
-    background-color: white;
+    background-color:#f5f5f5;
     box-shadow: 5px 10px 20px #888888;
     overflow: hidden;
     overflow-y: auto;
@@ -170,7 +170,7 @@ flex-direction: column;
 
   .miniDiv:hover {
     background-color: #E2E6E7;
-    border: 4px solid #0e5e6f;
+    border: 4px solid #21ebff;
     transition: 0.3s ease-in-out;
   }
 `;

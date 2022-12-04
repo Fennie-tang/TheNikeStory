@@ -12,14 +12,19 @@ const LoginButton = () => {
 export default LoginButton;
 
 const Button = styled.button`
-padding: 8px 14px 8px 14px;
-border-radius: 3px;
+padding: 8px 10px;
+margin: 0;
+text-decoration: none;
 border: none;
-background-color:#201A1E;
-font-family: "futura-pt-condensed", sans-serif; 
-font-weight: bold;
+font-size: 16px;
 color: white;
+background-color: #181818;
+transition: 0.5s;
+font-family: "futura-pt-condensed", sans-serif; 
 
-&:hover{
-  background-color:grey;
+&:hover {
+  background: #21ebff;
+  color: #000;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
 }`

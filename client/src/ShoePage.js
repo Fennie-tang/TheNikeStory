@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import background from "./assets/background.jpeg"
 import { useAuth0 } from "@auth0/auth0-react";
 import Loading from "./Loading";
-// import background from "./assets/NeonStreets"
+// import background from "./assets/neon.jpg"
 
 const Homepage = () => {
   const [allShoes, setAllShoes] = useState();
@@ -43,15 +43,18 @@ const Homepage = () => {
 export default Homepage
 
 const StyledDiv=styled.div`
-background-image:url("/NeonStreets.jpg");
+background-image:url("/crumble.jpg");
+
 /* background-image:url("/street.jpeg"); */
-background-size: cover;
+/* background-size: cover; */
+width:100%;
+height:100%;
 margin:0;
 `
 
 // const BackgroundImg=styled.img`
 // width:100%;
-// `
+
 
 const ShoeGrid = styled.div`
   padding-top: 50px;

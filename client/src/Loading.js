@@ -22,15 +22,15 @@ const Div=styled.div`
   width:150px;
   height:150px;
   background:transparent;
-  border:3px solid #023f05;
+  border:3px solid #21ebff;
   border-radius:50%;
   text-align:center;
   line-height:150px;
   font-size:1.3rem;
-  color:#DAA520;
+  color:grey;
   letter-spacing:4px;
   text-transform:uppercase;
-  text-shadow:0 0 10px #DAA520;
+  text-shadow:0 0 10px grey;
   box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 .ring:before
@@ -42,8 +42,8 @@ const Div=styled.div`
   width:100%;
   height:100%;
   border:3px solid transparent;
-  border-top:3px solid #DAA520;
-  border-right:3px solid #DAA520;
+  border-top:3px solid grey;
+  border-right:3px solid grey;
   border-radius:50%;
   animation:animateC 2s linear infinite;
 }
@@ -66,7 +66,7 @@ span:before
   width:16px;
   height:16px;
   border-radius:50%;
-  background:#DAA520;
+  background:grey;
   top:-6px;
   right:-8px;
   box-shadow:0 0 20px #fff000;

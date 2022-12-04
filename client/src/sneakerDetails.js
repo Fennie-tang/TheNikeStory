@@ -218,23 +218,36 @@ export default SneakerDetails;
 const BigWrapper = styled.div`
 	margin: 0;
 	height: 100%;
-	background-image:url("/banner.jpeg");
+	background-image:url("/waves.jpg");
 	/* filter: contrast(1.75); */
 	background-size: cover;
 	/* background-color: #E4D4C8; */
 	width: 100%;
 	h1 {
+		padding-top:20px;
+		font-family: "futura-pt-condensed", sans-serif;
 		text-align: center;
 		font-size: 30px;
-		color:white;
+		color:#f5f5f5;
+		-webkit-text-stroke: 1px grey;
+	text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
 	}
 	.year {
+		font-family: "futura-pt-condensed", sans-serif;
 		text-align: center;
 		margin-bottom: 5px;
 		margin-top: 5px;
 		font-weight: bold;
 		font-size: 20px;
-		color:white;
+		color:#f5f5f5;
+		-webkit-text-stroke: 1px grey;
+	text-shadow: -1px 1px 2px #23430C,
+				  1px 1px 2px #23430C,
+				  1px -1px 0 #23430C,
+				  -1px -1px 0 #23430C;
 	}
 `;
 const Wrapper = styled.div`
@@ -253,8 +266,8 @@ const Image = styled.image`
 	margin-bottom: 20px;
 	margin-top: 30px;
 	/* box-shadow: 0 0 8px 8px white inset; */
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	/* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 	}
 `;
 const CreateComment = styled.div`
@@ -262,18 +275,23 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin-bottom: 50px;
+
 `
 const Form = styled.form`
 	display: flex;
 	flex-direction:column;
 	align-items: center;
-	border: 1px solid red;
+	font-family: "futura-pt-condensed", sans-serif;
 	gap: 16px;
-	/* justify-content: center; */
+
+
 	textarea {
 		justify-content: center;
 		margin: 0;
 		width: 550px;
+		font-family: "futura-pt-condensed", sans-serif;
+		background-color: grey;
+		color: white;
 		
 	}
 `;
@@ -285,7 +303,7 @@ const ButtonDiv = styled.div`
 	button{
 		border:none;
 		border-radius: 5px;
-		background-color: grey;
+		background-color: #282828;
 		color:white;
 		padding:5px;
 	}
@@ -295,15 +313,25 @@ const ShoeInfo = styled.div`
 	width: 500px;
 	display: flex;
 	justify-content: center;
+	padding:15px;
+	content: "";
+   background-color: rgba(128,128,128,0.55);
+	 border: none;
+
+  
+
 	/* margin-left: 400px; */
 	p {
-		color: white;
+		color: #f5f5f5;
+		font-family: "futura-pt-condensed", sans-serif;
 	}
 `;
 const Comments = styled.div`
-	margin-left: 300px;
+	margin-left: 400px;
 	display: flex;
-	justify-content: center;
+	flex-direction:column;
+	align-items: center;
+	/* justify-content: center; */
 	gap: 10px;
 	width: 500px;
 
@@ -317,9 +345,20 @@ const CommentSection = styled.div`
 	grid-template-columns: 500px; */
 	margin: 20px 0 20px 0;
 	border: 1px solid grey;
+	border-radius: 5px;
 	background-color: white;
 	img {
-		height: 325px;
-		width: 500px;
+		height: 275px;
+		width: 400px;
+	}
+	button{
+
+		margin-right:5px;
+		margin-bottom: 5px;
+		border:none;
+		border-radius: 5px;
+		background-color: #282828;
+		color:white;
+		padding:5px;
 	}
 `;

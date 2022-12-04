@@ -53,16 +53,11 @@ const Wrapper = styled.div`
       font-size: 20px;
       font-family: "futura-pt-condensed", sans-serif; 
       font-weight: 600;
-      text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 52px #0fa,
-      0 0 62px #0fa,
-      0 0 65px #0fa,
-      0 0 70px #0fa;
-      /* padding-top:35px; */
+      /* text-shadow:
+      0 0 5px #fff,
+      0 0 30px #0fa,
+      0 0 40px #0fa, */
+      /* 0 0 70px #0fa; */
     }
   }
   `
@@ -79,8 +74,10 @@ const LinkItem = styled(NavLink)`
   } */
 
   :hover {
-    color: darkgray;
-    transition: 0.3s ease-in-out;
+    color: #21ebff;
+  text-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+   
   }
 `;
 const LeftSide=styled.div`

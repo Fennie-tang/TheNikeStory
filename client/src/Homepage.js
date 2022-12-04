@@ -73,13 +73,13 @@ h1 {
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
-    outline: 2px solid #7effb2;
+    outline: 2px solid #21ebff;
     padding: 25px 50px;
     overflow: hidden;
     transition: color 1s;
     border: none;
     border-radius: 5px;
-    background-color: #e923f4;
+    background-color: #272b2e;
     font-weight:bold;
   }
   .button:hover{
@@ -94,7 +94,7 @@ h1 {
     z-index:1;
     width: 150%;
     height: 100%;
-    background-color: #12e195;
+    background-color: grey;
     transform: scaleX(0) skewX(35deg);
     transform-origin: left;
     transition: transform 1s;
