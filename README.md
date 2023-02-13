@@ -41,7 +41,7 @@ To deploy this project run
 
 ## After clicking the button for Nike's 30 Iconic Shoes you will be directed to this page which you can view all the shoes
 
-<img src="./client/public/Shoespage.jpg"/>
+<img src="./client/public/ShoesPage.jpg"/>
 
 ## Clicking a Shoe will take you to it's details page
 
